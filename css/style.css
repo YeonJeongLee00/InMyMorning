@@ -1,0 +1,20 @@
+body {
+  background-color: wheat;
+}
+
+h1 {
+  color: red;
+}
+
+.clicked {
+  color: darkblue;
+}
+
+.form,
+.gretting {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
