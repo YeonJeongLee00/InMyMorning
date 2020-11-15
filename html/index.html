@@ -2,21 +2,44 @@
 <html>
   <header>
     <title>Momentum</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </header>
   <body>
     <div class="js-clock">
       <h1 class="js-title">00:00</h1>
     </div>
     <form class="js-form form" action="">
-      <input type="text" placeholder="What is you name?" />
+      <div class="form-name">
+        이름 : <input type="text" placeholder="이름" required />
+      </div>
+      <div class="form-sex">
+        성별 : 
+        <input type="radio" name="sex" value="여자" required> 여자
+        <input type="radio" name="sex" value="남자" required> 남자
+      </div>
+      <div class="form-birth">
+        생년월일 :
+        <input type="text" maxlength="4" placeholder="년(4자)" required>
+        <input type="text" minlength="2" maxlength="2" placeholder="월" required>
+        <input type="text" minlength="2" maxlength="2" placeholder="일" required>
+      </div>
+      <div class="form-interest">
+        관심사 : 
+        <input type="checkbox" name="chk_info" value="정치"> 정치
+        <input type="checkbox" name="chk_info" value="경제"> 경제
+        <input type="checkbox" name="chk_info" value="사회">  사회
+        <input type="checkbox" name="chk_info" value="생활/문화"> 생활/문화
+        <input type="checkbox" name="chk_info" value="세계"> 세계
+        <input type="checkbox" name="chk_info" value="IT/과학"> IT/과학
+      </div>
+      <div class="form-area">
+        지역 : <input type="text" placeholder="지역">
+      </div>
+      <input type="submit">
     </form>
     <!-- 이름 출력해주는 창 -->
     <h4 class="js-greeting greeting"></h4>
     <!-- todo 리스트 입력받을 창  -->
-    <form action="" class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
     <div class="js-clothes">
       <h1> 옷👚 </h1>
     </div>
@@ -29,16 +52,24 @@
     <div class="js-weather">
         <h1> 날씨🌨 </h1>
     </div>
+    <div class="js-todo">
+    <h3>할 일📝</h3>
+    <form action="" class="js-toDoForm">
+      <input type="text" placeholder="todo를 입력해주세요" />
+    </form>
     <!-- todo 리스트 띄워줄 창 -->
+    
     <ul class="js-toDoList"></ul>
+    </div>
+    
     <!-- js -->
-    <script src="/js/clock.js"></script>
-    <script src="/js/clothes.js"></script>
-    <script src="/js/greeting.js"></script>
-    <script src="/js/lucky.js"></script>
-    <script src="/js/news.js"></script>
-    <script src="/js/todo.js"></script>
-    <script src="/js/weather.js"></script>
+    <script src="../js/clock.js"></script>
+    <script src="../js/clothes.js"></script>
+    <script src="../js/greeting.js"></script>
+    <script src="../js/lucky.js"></script>
+    <script src="../js/news.js"></script>
+    <script src="../js/todo.js"></script>
+    <script src="../js/weather.js"></script>
   
   </body>
 </html>
