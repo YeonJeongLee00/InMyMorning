@@ -1,3 +1,6 @@
+@import "todo.css";
+@import "reset.css";
+
 body {
   background-color: wheat;
 }
