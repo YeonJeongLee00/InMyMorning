@@ -3,12 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 body {
-  background-color: wheat;
+  background-color: #ffffff;
+  /* background-image: url("../src/background.jpg"); */
   font-family: "Noto Sans KR", sans-serif;
 }
 
 h1 {
-  color: red;
+  color: #f00004;
 }
 
 .clicked {
