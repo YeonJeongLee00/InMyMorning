@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>Momentum</title>
+    <link rel="stylesheet" href="SE.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2ea626b3b1bb7eb9fa3d0c06dd5ebbd6&libraries=services"></script>
+  </header>
+  <body>
+
+    <!--  todo 리스트 입력받을 창  -->
+    <!-- <div class="js-clothes">
+      <h1> 옷👚 </h1>
+    </div>
+    <div class="js-lucky">
+      <h1> 운세💸 </h1>
+    </div>
+    <div class="js-news">
+        <h1> 뉴스📰 </h1>
+    </div>
+    <div class="js-weather">
+        <h1> 날씨🌨 </h1>
+    </div>
+
+    <!-- 부트스트랩 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <form class="js-form form" action="">
+            <div class="form-name">
+              이름 : <input type="text" placeholder="이름" required />
+            </div>
+            <div class="form-sex">
+              성별 :
+              <input type="radio" name="sex" value="여자" required> 여자
+              <input type="radio" name="sex" value="남자" required> 남자
+            </div>
+            <div class="form-birth">
+              생년월일 :
+              <input type="text" maxlength="4" placeholder="년(4자)" required>
+              <input type="text" minlength="2" maxlength="2" placeholder="월" required>
+              <input type="text" minlength="2" maxlength="2" placeholder="일" required>
+            </div>
+            <div class="form-interest">
+              관심사 :
+              <input type="checkbox" name="chk_info" value="정치"> 정치
+              <input type="checkbox" name="chk_info" value="경제"> 경제
+              <input type="checkbox" name="chk_info" value="사회">  사회
+              <input type="checkbox" name="chk_info" value="생활/문화"> 생활/문화
+              <input type="checkbox" name="chk_info" value="세계"> 세계
+              <input type="checkbox" name="chk_info" value="IT/과학"> IT/과학
+            </div>
+            <div class="form-area">
+              지역 : <input type="text" placeholder="지역">
+            </div>
+            <input type="submit">
+          </form> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- 날씨 -->
+              <div id="weather">
+                <h4> wheather </h4>
+                위치정보를 제공하는데 동의하시겠습니까? <button onclick="getLocation()">확인</button>
+              </div>
+              <div id="ViewWeather">
+                <div id="weatherTop">
+                  <span id="img"></span>
+                  <span id="temperature" class="right"></span><br>
+                  <br>
+                </div>
+                <div id="weatherbtm">
+                  <span id="wind" class="weatherbtm">
+                    <!-- <i class="fas fa-wind"></i> -->
+                  </span>
+                  <span id="hum" class="weatherbtm">
+                    <!-- <i class="fas fa-water"></i> -->
+                  </span>
+                  <span id="cloud" class="weatherbtm">
+                    <!-- <i class="fas fa-cloud"></i> -->
+                  </span>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- 이름 -->
+                  <!-- 이름 출력해주는 창 -->
+                   <h4 class="js-greeting greeting"></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- 시간 -->
+                  <div class="js-clock">
+                    <h1 class="js-title">00:00</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+
+              <div id="clothes">
+                <h4> clothes </h4>
+                <div id = "ViewClothes">
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              운세
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          할일
+          <div class="js-todo">
+            <!-- <h3>할 일📝</h3> -->
+            <form action="" class="js-toDoForm">
+              <input type="text" placeholder="todo를 입력해주세요" />
+            </form>
+            <!-- todo 리스트 띄워줄 창 -->
+            <h3>할일</h3>
+            <ul class="js-toDoList"></ul>
+            <h3>-------------------</h3>
+            <div class="js-toDoComListTitle">
+              <h3>완료</h3>
+              <button class="delToDoComBtn">🗑</button>
+            </div>
+            <ul class="js-toDoComList"></ul>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          뉴스
+        </div>
+      </div>
+    </div>
+
+    <!-- <!— js -->
+    <script src="SEWeather.js"></script>
+    <script src="SEClothes.js"></script>
+    <!-- <script src="../js/clock.js"></script>
+    <script src="../js/clothes.js"></script>
+    <script src="../js/greeting.js"></script>
+    <script src="../js/lucky.js"></script>
+    <script src="../js/news.js"></script>
+    <script src="../js/todo.js"></script>
+    <script src="../js/weather.js"></script> -->
+
+  </body>
+</html>
