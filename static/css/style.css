@@ -1,0 +1,54 @@
+@import "todo.css";
+@import "clock.css";
+@import "greeting.css";
+@import "weather.css";
+@import "lucky.css";
+@import "news.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+div {
+  color: white;
+}
+
+*[role="form"] {
+  max-width: 530px;
+  padding: 15px;
+  margin: 20px auto;
+  /* background-color: #fff; */
+  border-radius: 0.3em;
+  /* border: 3px solid white; */
+  color: white;
+}
+
+*[role="form"] h2 {
+  margin-left: 5em;
+  margin-bottom: 1em;
+}
+
+.form-title {
+  text-align: center;
+}
+
+/* 
+body {
+  background-color: #ffffff;
+  background-image: url("../src/background.jpg");
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+h1 {
+  color: #f00004;
+}
+
+.clicked {
+  color: darkblue;
+}
+
+.form,
+.gretting {
+  display: none;
+}
+
+.showing {
+  display: block;
+} */

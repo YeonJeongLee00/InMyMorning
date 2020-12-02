@@ -1,0 +1,19 @@
+
+.lucky_strong{
+  color:#2356FF;
+  font-size: 14px;
+  font-family: neon;
+  color: #426DFB;
+  
+  line-height: 14px;
+  text-shadow: 0 0 3vw #2356FF;
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+.lucky_img{
+    width: 50px;
+    height: 50px;
+}
+
