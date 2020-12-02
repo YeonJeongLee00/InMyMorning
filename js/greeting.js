@@ -109,7 +109,7 @@ function paintTitle(){
 
 function imageSetting(){
   var randomNum = Math.random();
-  var index = Math.floor( randomNum * 5 + 1 );
+  var index = Math.floor( randomNum * 4 + 1 );
   var background_string = "background" + index;
   
   background_setting.style.backgroundImage= `url(..//src/${background_string}.jpg)`;

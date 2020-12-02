@@ -94,14 +94,30 @@
           <div class="row">
             <div class="col-md-6">
               <!-- 날씨 -->
-              <div id="wheather">
+              <div id="weather">
                 <h4> wheather </h4>
                 위치정보를 제공하는데 동의하시겠습니까? <button onclick="getLocation()">확인</button>
-        
-                <div id="ViewWheather">
-        
+              </div>
+              <div id="ViewWeather">
+                <div id="weatherTop">
+                  <span id="img"></span>
+                  <span id="temperature" class="right"></span><br>
+                  <br>
                 </div>
-            </div>
+                <div id="weatherbtm">
+                  <span id="wind" class="weatherbtm">
+                    <!-- <i class="fas fa-wind"></i> -->
+                  </span>
+                  <span id="hum" class="weatherbtm">
+                    <!-- <i class="fas fa-water"></i> -->
+                  </span>
+                  <span id="cloud" class="weatherbtm">
+                    <!-- <i class="fas fa-cloud"></i> -->
+                  </span>
+                </div>
+
+
+              </div>
             </div>
             <div class="col-md-6">
               <div class="row">
@@ -123,11 +139,10 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              옷차림
               <div id="clothes">
                 <h4> clothes </h4>
                 <div id = "ViewClothes">
-          
+
                 </div>
               </div>
           
