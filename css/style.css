@@ -1,12 +1,10 @@
 @import "todo.css";
-/* @import "reset.css"; */
 @import "clock.css";
 @import "greeting.css";
 @import "weather.css";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
-body {
-  background-image: url("../src/background1.jpg");
+div {
   color: white;
 }
 

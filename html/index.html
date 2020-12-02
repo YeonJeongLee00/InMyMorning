@@ -4,6 +4,8 @@
     <title>Momentum</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   </header>
   <body>
     <!-- 부트스트랩 -->
@@ -174,7 +176,27 @@
       </div>
       <div class="row row-info">
         <div class="col-md-12">
-          뉴스
+          <h3>
+            <img class="news_img" src="{{ url_for('static', filename='img/news_img.png') }}" >
+            베스트 기사
+          </h3>
+            {% if num != None %}
+            {% for i in range(0, category_len) %}
+                <div class="news_category">
+                    <p class="as">
+                        {{category[i]}}
+                    </p>
+                    {% for j in range(3) %}
+                        <a href="{{link[i][j]}}">
+                            <p>
+                                {{content[i][j]}}
+                            </p>
+                        </a>
+                        
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            {% endif %}
         </div>
       </div>
     </div>
