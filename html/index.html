@@ -3,65 +3,167 @@
   <header>
     <title>Momentum</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   </header>
   <body>
-    <div class="js-clock">
-      <h1 class="js-title">00:00</h1>
-    </div>
-    <form class="js-form form" action="">
-      <div class="form-name">
-        이름 : <input type="text" placeholder="이름" required />
+    <!-- 부트스트랩 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 cont-div-form">
+            <div class="container div-form">
+              <form class="js-form form-horizontal" role="form">
+                  <h2 class="form-title">📝</h2>
+                  <div class="form-name form-group">
+                      <label for="firstName" class="col-sm-3 control-label">이름</label>
+                      <div class="col-sm-9">
+                          <input type="text" class="form-control" autofocus required>
+                      </div>
+                  </div>
+                  <div class="form-sex form-group">
+                      <label class="control-label col-sm-3">성별</label>
+                      <div class="col-sm-6">
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <label class="radio-inline">
+                                      <input type="radio" name = "sex"  value="여자" required>여자
+                                  </label>
+                              </div>
+                              <div class="col-sm-6">
+                                  <label class="radio-inline">
+                                      <input type="radio" name = "sex"  value="남자" required>남자
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div> <!-- /.form-group -->
+                  <div class="form-birth form-group">
+                      <label for="birthDate" class="col-sm-3 control-label">생년월일</label>
+                      <div class="col-sm-9">
+                          <input type="date" id="birthDate" class="form-control" required>
+                      </div>
+                  </div>
+                  <div class="form- interest form-group">
+                      <label class="control-label col-sm-3">관심사</label>
+                      <div class="col-sm-9">
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="chk_info" value="pol">정치
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox"name="chk_info" value="eco">경제
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="chk_info" value="soc">사회
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="chk_info" value="lif">생활/문화
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="chk_info" value="wor">세계
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="chk_info" value="sci">IT/과학
+                              </label>
+                          </div>
+                      </div>
+                  </div> <!-- /.form-group -->
+                  <div class="form-group">
+                      <div class="col-sm-9 col-sm-offset-3">
+                          <input type="submit" class="btn btn-warning btn-block">
+                      </div>
+                  </div>
+              </form> <!-- /form -->
+          </div> <!-- ./container -->
+          <h1 class="js-title title"></h1>
+        </div> 
+       
       </div>
-      <div class="form-sex">
-        성별 : 
-        <input type="radio" name="sex" value="여자" required> 여자
-        <input type="radio" name="sex" value="남자" required> 남자
+
+      <div class="row row-info">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- 날씨 -->
+              <div id="wheather">
+                <h4> wheather </h4>
+                위치정보를 제공하는데 동의하시겠습니까? <button onclick="getLocation()">확인</button>
+        
+                <div id="ViewWheather">
+        
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- 이름 -->
+                  <!-- 이름 출력해주는 창 -->
+                   <h1 class="js-greeting greeting"></h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- 시간 -->
+                  <div class="js-clock">
+                    <h1 class="js-clock">00:00</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              옷차림
+              <div id="clothes">
+                <h4> clothes </h4>
+                <div id = "ViewClothes">
+          
+                </div>
+              </div>
+          
+            </div>
+            <div class="col-md-6">
+              운세
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="js-todo">
+            <h3>📍</h3>
+            <form action="" class="js-toDoForm ">
+              <input type="text" class = "form-control" placeholder="할 일을 입력해주세요" />
+            </form>
+            <!-- todo 리스트 띄워줄 창 -->
+            <h3>🗒</h3>
+            <ul class="js-toDoList"></ul>
+            <hr class="line">
+            <!-- <div class="js-toDoComListTitle">
+              <h3></h3> -->
+              <h3>
+                <button class="delToDoComBtn" title="전체 삭제됩니다.">🗑</button>
+              </h3>
+            <!-- </div> -->
+            <ul class="js-toDoComList"></ul>
+            </div>
+        </div>
       </div>
-      <div class="form-birth">
-        생년월일 :
-        <input type="text" maxlength="4" placeholder="년(4자)" required>
-        <input type="text" minlength="2" maxlength="2" placeholder="월" required>
-        <input type="text" minlength="2" maxlength="2" placeholder="일" required>
+      <div class="row row-info">
+        <div class="col-md-12">
+          뉴스
+        </div>
       </div>
-      <div class="form-interest">
-        관심사 : 
-        <input type="checkbox" name="chk_info" value="정치"> 정치
-        <input type="checkbox" name="chk_info" value="경제"> 경제
-        <input type="checkbox" name="chk_info" value="사회">  사회
-        <input type="checkbox" name="chk_info" value="생활/문화"> 생활/문화
-        <input type="checkbox" name="chk_info" value="세계"> 세계
-        <input type="checkbox" name="chk_info" value="IT/과학"> IT/과학
-      </div>
-      <div class="form-area">
-        지역 : <input type="text" placeholder="지역">
-      </div>
-      <input type="submit">
-    </form>
-    <!-- 이름 출력해주는 창 -->
-    <h4 class="js-greeting greeting"></h4>
-    <!-- todo 리스트 입력받을 창  -->
-    <div class="js-clothes">
-      <h1> 옷👚 </h1>
     </div>
-    <div class="js-lucky">
-      <h1> 운세💸 </h1>
-    </div>
-    <div class="js-news">
-        <h1> 뉴스📰 </h1>
-    </div>
-    <div class="js-weather">
-        <h1> 날씨🌨 </h1>
-    </div>
-    <div class="js-todo">
-    <h3>할 일📝</h3>
-    <form action="" class="js-toDoForm">
-      <input type="text" placeholder="todo를 입력해주세요" />
-    </form>
-    <!-- todo 리스트 띄워줄 창 -->
-    
-    <ul class="js-toDoList"></ul>
-    </div>
-    
+
     <!-- js -->
     <script src="../js/clock.js"></script>
     <script src="../js/clothes.js"></script>
@@ -73,3 +175,4 @@
   
   </body>
 </html>
+
