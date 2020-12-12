@@ -7,21 +7,14 @@
   float: right;
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-right: 150px;
+  margin-right: 230px;
 }
 
 .weatherbtm {
   margin-right: 50px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 div {
   margin-bottom: 10px;
-}
-
-body {
-  /* background-image:url('background.PNG'); */
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  color: white;
 }

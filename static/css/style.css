@@ -29,13 +29,11 @@ div {
   text-align: center;
 }
 
-/* 
-body {
-  background-color: #ffffff;
-  background-image: url("../src/background.jpg");
-  font-family: "Noto Sans KR", sans-serif;
-}
 
+body {
+background-size: cover;
+}
+/* 
 h1 {
   color: #f00004;
 }

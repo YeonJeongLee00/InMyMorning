@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-md-12 cont-div-form">
             <div class="container div-form">
-              <form class="js-form form-horizontal" role="form">
+              <form class="js-form form-horizontal" role="form" action="/info" method="POST">
                   <h2 class="form-title">📝</h2>
                   <div class="form-name form-group">
                       <label for="firstName" class="col-sm-3 control-label">이름</label>
@@ -27,12 +27,12 @@
                           <div class="row">
                               <div class="col-sm-6">
                                   <label class="radio-inline">
-                                      <input type="radio" name = "sex"  value="여자" required>여자
+                                      <input type="radio" name = "sex"  value="female" required>여자
                                   </label>
                               </div>
                               <div class="col-sm-6">
                                   <label class="radio-inline">
-                                      <input type="radio" name = "sex"  value="남자" required>남자
+                                      <input type="radio" name = "sex"  value="male" required>남자
                                   </label>
                               </div>
                           </div>
@@ -41,7 +41,7 @@
                   <div class="form-birth form-group">
                       <label for="birthDate" class="col-sm-3 control-label">생년월일</label>
                       <div class="col-sm-9">
-                          <input type="date" id="birthDate" class="form-control" required>
+                          <input type="date" name="birth" id="birthDate" class="form-control" required>
                       </div>
                   </div>
                   <div class="form- interest form-group">
@@ -193,18 +193,19 @@
       </div>
       <div class="row row-info">
         <div class="col-md-12">
-          <h3>
+          <h3 class="news_title">
             <img class="news_img" src="{{ url_for('static', filename='img/news_img.png') }}" >
             베스트 기사
           </h3>
+          <div class="news">
             {% if num != None %}
             {% for i in range(0, category_len) %}
                 <div class="news_category">
-                    <p class="as">
+                    <p class="news_category_name">
                         {{category[i]}}
                     </p>
                     {% for j in range(3) %}
-                        <a href="{{link[i][j]}}">
+                        <a href="{{link[i][j]}}" target="_blank">
                             <p>
                                 {{content[i][j]}}
                             </p>
@@ -214,6 +215,7 @@
                 </div>
             {% endfor %}
             {% endif %}
+          </div>
 
       </div>
       </div>

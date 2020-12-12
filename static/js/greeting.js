@@ -27,7 +27,7 @@ function saveInfo(info) {
 function handleSubmit(event) {
   // 이벤트를 취소, form에서 enter를 눌렀을 때 그 이벤트 취소
   // 기본동작 막기
-  event.preventDefault();
+  //event.preventDefault();
   let info_list = []
   let index = 3;
   
@@ -90,6 +90,7 @@ function askForName() {
   // form을 보여준다. 이름을 입력 받음
   form.classList.add(SHOWING_CN);
   // (반응할 이벤트 유형, 이벤트가 발생했을때 알림을 받는 객체, option)
+  document.body.appendChild (form);
   form.addEventListener("submit", handleSubmit);
 }
 
